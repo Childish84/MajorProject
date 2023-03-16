@@ -36,7 +36,7 @@ namespace Project
             while (List.Count > 0)
             {
                 List[0].Dispose();
-                Console.WriteLine("doing a thing " + List.Count + List.Count());
+
             }
         }
         
