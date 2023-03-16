@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml.Linq;
 using static Project.Program;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 
 namespace Project
@@ -157,6 +158,31 @@ namespace Project
             currentChunk.Refresh();
         }
 
-        
+        private void saveTile_Click(object sender, EventArgs e)
+        {
+            var fileExplorer = new SaveFileDialog();
+            if(fileExplorer.ShowDialog() == DialogResult.OK)
+            {
+                TileBmp.Save(fileExplorer.FileName);
+            }
+        }
+
+        private void saveBlock_Click(object sender, EventArgs e)
+        {
+            var fileExplorer = new SaveFileDialog();
+            if (fileExplorer.ShowDialog() == DialogResult.OK)
+            {
+                BlockBmp.Save(fileExplorer.FileName);
+            }
+        }
+
+        private void saveChunk_Click(object sender, EventArgs e)
+        {
+            var fileExplorer = new SaveFileDialog();
+            if (fileExplorer.ShowDialog() == DialogResult.OK)
+            {
+                ChunkBmp.Save(fileExplorer.FileName,System.Drawing.Imaging.ImageFormat.Bmp);
+            }
+        }
     }
 }

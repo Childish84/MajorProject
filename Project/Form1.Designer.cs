@@ -59,9 +59,10 @@
             // 
             // loadArt
             // 
-            this.loadArt.Location = new System.Drawing.Point(413, 25);
+            this.loadArt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loadArt.Location = new System.Drawing.Point(0, 0);
             this.loadArt.Name = "loadArt";
-            this.loadArt.Size = new System.Drawing.Size(195, 23);
+            this.loadArt.Size = new System.Drawing.Size(640, 493);
             this.loadArt.TabIndex = 0;
             this.loadArt.Text = "Select art";
             this.loadArt.UseVisualStyleBackColor = true;
@@ -70,7 +71,8 @@
             // currentChunk
             // 
             this.currentChunk.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currentChunk.Location = new System.Drawing.Point(12, 36);
+            this.currentChunk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.currentChunk.Location = new System.Drawing.Point(0, 0);
             this.currentChunk.MaximumSize = new System.Drawing.Size(384, 384);
             this.currentChunk.MinimumSize = new System.Drawing.Size(128, 128);
             this.currentChunk.Name = "currentChunk";
@@ -82,7 +84,8 @@
             // currentTile
             // 
             this.currentTile.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currentTile.Location = new System.Drawing.Point(413, 366);
+            this.currentTile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.currentTile.Location = new System.Drawing.Point(0, 0);
             this.currentTile.MaximumSize = new System.Drawing.Size(80, 80);
             this.currentTile.MinimumSize = new System.Drawing.Size(8, 8);
             this.currentTile.Name = "currentTile";
@@ -94,7 +97,8 @@
             // currentBlock
             // 
             this.currentBlock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currentBlock.Location = new System.Drawing.Point(402, 141);
+            this.currentBlock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.currentBlock.Location = new System.Drawing.Point(0, 0);
             this.currentBlock.MaximumSize = new System.Drawing.Size(160, 160);
             this.currentBlock.MinimumSize = new System.Drawing.Size(16, 16);
             this.currentBlock.Name = "currentBlock";
@@ -106,9 +110,10 @@
             // tileHflip
             // 
             this.tileHflip.AutoSize = true;
-            this.tileHflip.Location = new System.Drawing.Point(499, 400);
+            this.tileHflip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tileHflip.Location = new System.Drawing.Point(0, 0);
             this.tileHflip.Name = "tileHflip";
-            this.tileHflip.Size = new System.Drawing.Size(56, 20);
+            this.tileHflip.Size = new System.Drawing.Size(640, 493);
             this.tileHflip.TabIndex = 4;
             this.tileHflip.Text = "Hflip";
             this.tileHflip.UseVisualStyleBackColor = true;
@@ -117,9 +122,10 @@
             // tileVflip
             // 
             this.tileVflip.AutoSize = true;
-            this.tileVflip.Location = new System.Drawing.Point(500, 426);
+            this.tileVflip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tileVflip.Location = new System.Drawing.Point(0, 0);
             this.tileVflip.Name = "tileVflip";
-            this.tileVflip.Size = new System.Drawing.Size(55, 20);
+            this.tileVflip.Size = new System.Drawing.Size(640, 493);
             this.tileVflip.TabIndex = 5;
             this.tileVflip.Text = "Vfilp";
             this.tileVflip.UseVisualStyleBackColor = true;
@@ -127,9 +133,10 @@
             // 
             // loadBlock
             // 
-            this.loadBlock.Location = new System.Drawing.Point(413, 83);
+            this.loadBlock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loadBlock.Location = new System.Drawing.Point(0, 0);
             this.loadBlock.Name = "loadBlock";
-            this.loadBlock.Size = new System.Drawing.Size(195, 23);
+            this.loadBlock.Size = new System.Drawing.Size(640, 493);
             this.loadBlock.TabIndex = 6;
             this.loadBlock.Text = "Select block mappings";
             this.loadBlock.UseVisualStyleBackColor = true;
@@ -137,9 +144,10 @@
             // 
             // loadChunk
             // 
-            this.loadChunk.Location = new System.Drawing.Point(413, 112);
+            this.loadChunk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loadChunk.Location = new System.Drawing.Point(0, 0);
             this.loadChunk.Name = "loadChunk";
-            this.loadChunk.Size = new System.Drawing.Size(195, 23);
+            this.loadChunk.Size = new System.Drawing.Size(640, 493);
             this.loadChunk.TabIndex = 7;
             this.loadChunk.Text = "Select chunck mappings";
             this.loadChunk.UseVisualStyleBackColor = true;
@@ -147,51 +155,55 @@
             // 
             // blockID
             // 
+            this.blockID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blockID.Hexadecimal = true;
-            this.blockID.Location = new System.Drawing.Point(402, 318);
+            this.blockID.Location = new System.Drawing.Point(0, 0);
             this.blockID.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.blockID.Name = "blockID";
-            this.blockID.Size = new System.Drawing.Size(52, 22);
+            this.blockID.Size = new System.Drawing.Size(640, 22);
             this.blockID.TabIndex = 8;
             this.blockID.ValueChanged += new System.EventHandler(this.blockID_ValueChanged);
             // 
             // ChunkID
             // 
+            this.ChunkID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChunkID.Hexadecimal = true;
-            this.ChunkID.Location = new System.Drawing.Point(135, 426);
+            this.ChunkID.Location = new System.Drawing.Point(0, 0);
             this.ChunkID.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.ChunkID.Name = "ChunkID";
-            this.ChunkID.Size = new System.Drawing.Size(52, 22);
+            this.ChunkID.Size = new System.Drawing.Size(640, 22);
             this.ChunkID.TabIndex = 9;
             this.ChunkID.ValueChanged += new System.EventHandler(this.ChunkID_ValueChanged);
             // 
             // paleteLine
             // 
+            this.paleteLine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paleteLine.Hexadecimal = true;
-            this.paleteLine.Location = new System.Drawing.Point(500, 372);
+            this.paleteLine.Location = new System.Drawing.Point(0, 0);
             this.paleteLine.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
             this.paleteLine.Name = "paleteLine";
-            this.paleteLine.Size = new System.Drawing.Size(52, 22);
+            this.paleteLine.Size = new System.Drawing.Size(640, 22);
             this.paleteLine.TabIndex = 10;
             this.paleteLine.ValueChanged += new System.EventHandler(this.paleteLine_ValueChanged);
             // 
             // loadPal
             // 
-            this.loadPal.Location = new System.Drawing.Point(413, 54);
+            this.loadPal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loadPal.Location = new System.Drawing.Point(0, 0);
             this.loadPal.Name = "loadPal";
-            this.loadPal.Size = new System.Drawing.Size(195, 23);
+            this.loadPal.Size = new System.Drawing.Size(640, 493);
             this.loadPal.TabIndex = 11;
             this.loadPal.Text = "Select pallet";
             this.loadPal.UseVisualStyleBackColor = true;
@@ -199,24 +211,26 @@
             // 
             // tileID
             // 
+            this.tileID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileID.Hexadecimal = true;
-            this.tileID.Location = new System.Drawing.Point(413, 452);
+            this.tileID.Location = new System.Drawing.Point(0, 0);
             this.tileID.Maximum = new decimal(new int[] {
             0,
             0,
             0,
             0});
             this.tileID.Name = "tileID";
-            this.tileID.Size = new System.Drawing.Size(52, 22);
+            this.tileID.Size = new System.Drawing.Size(640, 22);
             this.tileID.TabIndex = 13;
             this.tileID.ValueChanged += new System.EventHandler(this.tileID_ValueChanged);
             // 
             // blockHflip
             // 
             this.blockHflip.AutoSize = true;
-            this.blockHflip.Location = new System.Drawing.Point(568, 266);
+            this.blockHflip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blockHflip.Location = new System.Drawing.Point(0, 0);
             this.blockHflip.Name = "blockHflip";
-            this.blockHflip.Size = new System.Drawing.Size(56, 20);
+            this.blockHflip.Size = new System.Drawing.Size(640, 493);
             this.blockHflip.TabIndex = 14;
             this.blockHflip.Text = "Hflip";
             this.blockHflip.UseVisualStyleBackColor = true;
@@ -225,9 +239,10 @@
             // blockVflip
             // 
             this.blockVflip.AutoSize = true;
-            this.blockVflip.Location = new System.Drawing.Point(568, 292);
+            this.blockVflip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blockVflip.Location = new System.Drawing.Point(0, 0);
             this.blockVflip.Name = "blockVflip";
-            this.blockVflip.Size = new System.Drawing.Size(55, 20);
+            this.blockVflip.Size = new System.Drawing.Size(640, 493);
             this.blockVflip.TabIndex = 15;
             this.blockVflip.Text = "Vfilp";
             this.blockVflip.UseVisualStyleBackColor = true;
@@ -236,9 +251,10 @@
             // chunkHflip
             // 
             this.chunkHflip.AutoSize = true;
-            this.chunkHflip.Location = new System.Drawing.Point(12, 428);
+            this.chunkHflip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chunkHflip.Location = new System.Drawing.Point(0, 0);
             this.chunkHflip.Name = "chunkHflip";
-            this.chunkHflip.Size = new System.Drawing.Size(56, 20);
+            this.chunkHflip.Size = new System.Drawing.Size(640, 493);
             this.chunkHflip.TabIndex = 16;
             this.chunkHflip.Text = "Hflip";
             this.chunkHflip.UseVisualStyleBackColor = true;
@@ -247,9 +263,10 @@
             // chunkVflip
             // 
             this.chunkVflip.AutoSize = true;
-            this.chunkVflip.Location = new System.Drawing.Point(74, 428);
+            this.chunkVflip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chunkVflip.Location = new System.Drawing.Point(0, 0);
             this.chunkVflip.Name = "chunkVflip";
-            this.chunkVflip.Size = new System.Drawing.Size(55, 20);
+            this.chunkVflip.Size = new System.Drawing.Size(640, 493);
             this.chunkVflip.TabIndex = 17;
             this.chunkVflip.Text = "Vfilp";
             this.chunkVflip.UseVisualStyleBackColor = true;
@@ -257,30 +274,36 @@
             // 
             // saveChunk
             // 
-            this.saveChunk.Location = new System.Drawing.Point(206, 425);
+            this.saveChunk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saveChunk.Location = new System.Drawing.Point(0, 0);
             this.saveChunk.Name = "saveChunk";
-            this.saveChunk.Size = new System.Drawing.Size(134, 23);
+            this.saveChunk.Size = new System.Drawing.Size(640, 493);
             this.saveChunk.TabIndex = 18;
             this.saveChunk.Text = "save chunk as bmp";
             this.saveChunk.UseVisualStyleBackColor = true;
+            this.saveChunk.Click += new System.EventHandler(this.saveChunk_Click);
             // 
             // saveTile
             // 
-            this.saveTile.Location = new System.Drawing.Point(471, 452);
+            this.saveTile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saveTile.Location = new System.Drawing.Point(0, 0);
             this.saveTile.Name = "saveTile";
-            this.saveTile.Size = new System.Drawing.Size(116, 23);
+            this.saveTile.Size = new System.Drawing.Size(640, 493);
             this.saveTile.TabIndex = 19;
             this.saveTile.Text = "save tile as bmp";
             this.saveTile.UseVisualStyleBackColor = true;
+            this.saveTile.Click += new System.EventHandler(this.saveTile_Click);
             // 
             // saveBlock
             // 
-            this.saveBlock.Location = new System.Drawing.Point(460, 318);
+            this.saveBlock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saveBlock.Location = new System.Drawing.Point(0, 0);
             this.saveBlock.Name = "saveBlock";
-            this.saveBlock.Size = new System.Drawing.Size(148, 23);
+            this.saveBlock.Size = new System.Drawing.Size(640, 493);
             this.saveBlock.TabIndex = 20;
             this.saveBlock.Text = "save block as bmp";
             this.saveBlock.UseVisualStyleBackColor = true;
+            this.saveBlock.Click += new System.EventHandler(this.saveBlock_Click);
             // 
             // Form1
             // 
