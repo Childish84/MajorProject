@@ -90,7 +90,6 @@
             this.currentTile.Size = new System.Drawing.Size(80, 80);
             this.currentTile.TabIndex = 2;
             this.currentTile.TabStop = false;
-            this.currentTile.Click += new System.EventHandler(this.currentTile_Click);
             this.currentTile.Paint += new System.Windows.Forms.PaintEventHandler(this.currentTile_Paint);
             // 
             // currentBlock
@@ -263,7 +262,7 @@
             this.saveChunk.Name = "saveChunk";
             this.saveChunk.Size = new System.Drawing.Size(166, 38);
             this.saveChunk.TabIndex = 18;
-            this.saveChunk.Text = "save chunk as bmp";
+            this.saveChunk.Text = "export chunk";
             this.saveChunk.UseVisualStyleBackColor = true;
             this.saveChunk.Click += new System.EventHandler(this.saveChunk_Click);
             // 
@@ -273,7 +272,7 @@
             this.saveTile.Name = "saveTile";
             this.saveTile.Size = new System.Drawing.Size(87, 48);
             this.saveTile.TabIndex = 19;
-            this.saveTile.Text = "save tile as bmp";
+            this.saveTile.Text = "export tile";
             this.saveTile.UseVisualStyleBackColor = true;
             this.saveTile.Click += new System.EventHandler(this.saveTile_Click);
             // 
@@ -283,7 +282,7 @@
             this.saveBlock.Name = "saveBlock";
             this.saveBlock.Size = new System.Drawing.Size(160, 38);
             this.saveBlock.TabIndex = 20;
-            this.saveBlock.Text = "save block as bmp";
+            this.saveBlock.Text = "export tile";
             this.saveBlock.UseVisualStyleBackColor = true;
             this.saveBlock.Click += new System.EventHandler(this.saveBlock_Click);
             // 

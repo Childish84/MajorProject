@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.IO;
 using System.Xml.Linq;
 using static Project.Program;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace Project
@@ -160,28 +162,46 @@ namespace Project
 
         private void saveTile_Click(object sender, EventArgs e)
         {
-            var fileExplorer = new SaveFileDialog();
-            if(fileExplorer.ShowDialog() == DialogResult.OK)
-            {
-                TileBmp.Save(fileExplorer.FileName);
-            }
+            savefile(TileBmp);
         }
 
         private void saveBlock_Click(object sender, EventArgs e)
         {
-            var fileExplorer = new SaveFileDialog();
-            if (fileExplorer.ShowDialog() == DialogResult.OK)
-            {
-                BlockBmp.Save(fileExplorer.FileName);
-            }
+            savefile(BlockBmp);
         }
 
         private void saveChunk_Click(object sender, EventArgs e)
         {
+            savefile(ChunkBmp);
+        }
+        private void savefile(Bitmap bmp)
+        {
             var fileExplorer = new SaveFileDialog();
+            fileExplorer.Filter = "JPEG Image|*.jpg|PNG Image|*.png|GIF Image|*.gif|Bitmap Image|*.bmp";
+            fileExplorer.Title = "Save Image As";
             if (fileExplorer.ShowDialog() == DialogResult.OK)
             {
-                ChunkBmp.Save(fileExplorer.FileName,System.Drawing.Imaging.ImageFormat.Bmp);
+                string chosenFormat = System.IO.Path.GetExtension(fileExplorer.FileName);
+                ImageFormat format = null;
+
+
+                switch (chosenFormat)
+                {
+                    case ".jpg":
+                        format = ImageFormat.Jpeg;
+                        break;
+                    case ".png":
+                        format = ImageFormat.Png;
+                        break;
+                    case ".gif":
+                        format = ImageFormat.Gif;
+                        break;
+                    case ".bmp":
+                        format = ImageFormat.Bmp;
+                        break;
+                }
+
+                bmp.Save(fileExplorer.FileName);
             }
         }
     }
