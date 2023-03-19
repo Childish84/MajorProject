@@ -14,7 +14,7 @@ namespace Project
     {
         public int ID { get; private set; }
 
-        private byte[] data { get; } = new byte[128];
+        public byte[] data { get; private set; } = new byte[128];
         public Chunk()
         {
             ID = List.Count;
@@ -48,9 +48,8 @@ namespace Project
 
             while (List.Count < (Program.bytesUncompressed/128))
             {
-                new Chunk();
+                new Chunk();   
             }
-            Console.WriteLine(List.Count);
         }
         public Bitmap ToBMP(bool hFlip, bool vFlip)
         {
@@ -65,7 +64,6 @@ namespace Project
                     bool Hflip = Convert.ToBoolean((data[blockToDraw * 2] & 0b0000_0100) >> 2);
                     int blockID = (data[blockToDraw * 2] & 0b0000_0011)<<8;
                     blockID += data[blockToDraw * 2 + 1];
-                    Console.WriteLine(blockID);
 
                     Block block;
                     if (blockID > Block.List.Count-1)

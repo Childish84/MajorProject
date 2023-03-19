@@ -12,12 +12,11 @@ namespace Project
     {
         public int ID { get; private set; }
 
-        private byte[] data { get; } = new byte[64];
+        public byte[] data { get; private set; } = new byte[64];
         
         public Tile()
         {
             ID = List.Count();
-            Console.WriteLine("making tile " + ID);
             Array.Copy(Program.Kos_Buffer, ID * 0x20, data, 0, 0x20);
             data = Program.ConvertToNibbles(data);
             List.Add(this);

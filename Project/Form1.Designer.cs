@@ -60,7 +60,8 @@
             // 
             // loadArt
             // 
-            this.loadArt.Location = new System.Drawing.Point(409, 55);
+            this.loadArt.Location = new System.Drawing.Point(220, 11);
+            this.loadArt.Margin = new System.Windows.Forms.Padding(2);
             this.loadArt.Name = "loadArt";
             this.loadArt.Size = new System.Drawing.Size(114, 28);
             this.loadArt.TabIndex = 0;
@@ -71,23 +72,28 @@
             // currentChunk
             // 
             this.currentChunk.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currentChunk.Location = new System.Drawing.Point(12, 21);
-            this.currentChunk.MaximumSize = new System.Drawing.Size(384, 384);
-            this.currentChunk.MinimumSize = new System.Drawing.Size(384, 384);
+            this.currentChunk.Location = new System.Drawing.Point(14, 84);
+            this.currentChunk.Margin = new System.Windows.Forms.Padding(2);
+            this.currentChunk.MaximumSize = new System.Drawing.Size(256, 256);
+            this.currentChunk.MinimumSize = new System.Drawing.Size(128, 128);
             this.currentChunk.Name = "currentChunk";
-            this.currentChunk.Size = new System.Drawing.Size(384, 384);
+            this.currentChunk.Size = new System.Drawing.Size(256, 256);
+            this.currentChunk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.currentChunk.TabIndex = 1;
             this.currentChunk.TabStop = false;
             this.currentChunk.Paint += new System.Windows.Forms.PaintEventHandler(this.currentChunk_Paint);
+            this.currentChunk.MouseClick += new System.Windows.Forms.MouseEventHandler(this.currentChunk_MouseClick);
             // 
             // currentTile
             // 
             this.currentTile.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currentTile.Location = new System.Drawing.Point(409, 103);
+            this.currentTile.Location = new System.Drawing.Point(361, 35);
+            this.currentTile.Margin = new System.Windows.Forms.Padding(2);
             this.currentTile.MaximumSize = new System.Drawing.Size(80, 80);
-            this.currentTile.MinimumSize = new System.Drawing.Size(80, 80);
+            this.currentTile.MinimumSize = new System.Drawing.Size(8, 8);
             this.currentTile.Name = "currentTile";
             this.currentTile.Size = new System.Drawing.Size(80, 80);
+            this.currentTile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.currentTile.TabIndex = 2;
             this.currentTile.TabStop = false;
             this.currentTile.Paint += new System.Windows.Forms.PaintEventHandler(this.currentTile_Paint);
@@ -95,19 +101,23 @@
             // currentBlock
             // 
             this.currentBlock.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currentBlock.Location = new System.Drawing.Point(409, 243);
+            this.currentBlock.Location = new System.Drawing.Point(361, 174);
+            this.currentBlock.Margin = new System.Windows.Forms.Padding(2);
             this.currentBlock.MaximumSize = new System.Drawing.Size(160, 160);
-            this.currentBlock.MinimumSize = new System.Drawing.Size(160, 160);
+            this.currentBlock.MinimumSize = new System.Drawing.Size(16, 16);
             this.currentBlock.Name = "currentBlock";
             this.currentBlock.Size = new System.Drawing.Size(160, 160);
+            this.currentBlock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.currentBlock.TabIndex = 3;
             this.currentBlock.TabStop = false;
             this.currentBlock.Paint += new System.Windows.Forms.PaintEventHandler(this.currentBlock_Paint);
+            this.currentBlock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.currentBlock_MouseClick);
             // 
             // tileHflip
             // 
             this.tileHflip.AutoSize = true;
-            this.tileHflip.Location = new System.Drawing.Point(494, 137);
+            this.tileHflip.Location = new System.Drawing.Point(470, 84);
+            this.tileHflip.Margin = new System.Windows.Forms.Padding(2);
             this.tileHflip.Name = "tileHflip";
             this.tileHflip.Size = new System.Drawing.Size(56, 20);
             this.tileHflip.TabIndex = 4;
@@ -118,7 +128,8 @@
             // tileVflip
             // 
             this.tileVflip.AutoSize = true;
-            this.tileVflip.Location = new System.Drawing.Point(495, 163);
+            this.tileVflip.Location = new System.Drawing.Point(470, 110);
+            this.tileVflip.Margin = new System.Windows.Forms.Padding(2);
             this.tileVflip.Name = "tileVflip";
             this.tileVflip.Size = new System.Drawing.Size(55, 20);
             this.tileVflip.TabIndex = 5;
@@ -128,9 +139,10 @@
             // 
             // loadBlock
             // 
-            this.loadBlock.Location = new System.Drawing.Point(298, 422);
+            this.loadBlock.Location = new System.Drawing.Point(16, 11);
+            this.loadBlock.Margin = new System.Windows.Forms.Padding(2);
             this.loadBlock.Name = "loadBlock";
-            this.loadBlock.Size = new System.Drawing.Size(105, 53);
+            this.loadBlock.Size = new System.Drawing.Size(175, 28);
             this.loadBlock.TabIndex = 6;
             this.loadBlock.Text = "Select block mappings";
             this.loadBlock.UseVisualStyleBackColor = true;
@@ -138,9 +150,10 @@
             // 
             // loadChunk
             // 
-            this.loadChunk.Location = new System.Drawing.Point(187, 422);
+            this.loadChunk.Location = new System.Drawing.Point(16, 44);
+            this.loadChunk.Margin = new System.Windows.Forms.Padding(2);
             this.loadChunk.Name = "loadChunk";
-            this.loadChunk.Size = new System.Drawing.Size(105, 53);
+            this.loadChunk.Size = new System.Drawing.Size(175, 28);
             this.loadChunk.TabIndex = 7;
             this.loadChunk.Text = "Select chunk mappings";
             this.loadChunk.UseVisualStyleBackColor = true;
@@ -149,7 +162,8 @@
             // blockID
             // 
             this.blockID.Hexadecimal = true;
-            this.blockID.Location = new System.Drawing.Point(409, 409);
+            this.blockID.Location = new System.Drawing.Point(369, 379);
+            this.blockID.Margin = new System.Windows.Forms.Padding(2);
             this.blockID.Maximum = new decimal(new int[] {
             0,
             0,
@@ -164,6 +178,7 @@
             // 
             this.ChunkID.Hexadecimal = true;
             this.ChunkID.Location = new System.Drawing.Point(12, 409);
+            this.ChunkID.Margin = new System.Windows.Forms.Padding(2);
             this.ChunkID.Maximum = new decimal(new int[] {
             0,
             0,
@@ -177,7 +192,8 @@
             // paleteLine
             // 
             this.paleteLine.Hexadecimal = true;
-            this.paleteLine.Location = new System.Drawing.Point(495, 109);
+            this.paleteLine.Location = new System.Drawing.Point(470, 54);
+            this.paleteLine.Margin = new System.Windows.Forms.Padding(2);
             this.paleteLine.Maximum = new decimal(new int[] {
             3,
             0,
@@ -190,7 +206,8 @@
             // 
             // loadPal
             // 
-            this.loadPal.Location = new System.Drawing.Point(409, 21);
+            this.loadPal.Location = new System.Drawing.Point(220, 44);
+            this.loadPal.Margin = new System.Windows.Forms.Padding(2);
             this.loadPal.Name = "loadPal";
             this.loadPal.Size = new System.Drawing.Size(114, 28);
             this.loadPal.TabIndex = 11;
@@ -201,7 +218,8 @@
             // tileID
             // 
             this.tileID.Hexadecimal = true;
-            this.tileID.Location = new System.Drawing.Point(409, 203);
+            this.tileID.Location = new System.Drawing.Point(361, 140);
+            this.tileID.Margin = new System.Windows.Forms.Padding(2);
             this.tileID.Maximum = new decimal(new int[] {
             0,
             0,
@@ -215,7 +233,8 @@
             // blockHflip
             // 
             this.blockHflip.AutoSize = true;
-            this.blockHflip.Location = new System.Drawing.Point(467, 409);
+            this.blockHflip.Location = new System.Drawing.Point(426, 382);
+            this.blockHflip.Margin = new System.Windows.Forms.Padding(2);
             this.blockHflip.Name = "blockHflip";
             this.blockHflip.Size = new System.Drawing.Size(56, 20);
             this.blockHflip.TabIndex = 14;
@@ -226,7 +245,8 @@
             // blockVflip
             // 
             this.blockVflip.AutoSize = true;
-            this.blockVflip.Location = new System.Drawing.Point(529, 410);
+            this.blockVflip.Location = new System.Drawing.Point(490, 382);
+            this.blockVflip.Margin = new System.Windows.Forms.Padding(2);
             this.blockVflip.Name = "blockVflip";
             this.blockVflip.Size = new System.Drawing.Size(55, 20);
             this.blockVflip.TabIndex = 15;
@@ -237,7 +257,8 @@
             // chunkHflip
             // 
             this.chunkHflip.AutoSize = true;
-            this.chunkHflip.Location = new System.Drawing.Point(70, 409);
+            this.chunkHflip.Location = new System.Drawing.Point(70, 412);
+            this.chunkHflip.Margin = new System.Windows.Forms.Padding(2);
             this.chunkHflip.Name = "chunkHflip";
             this.chunkHflip.Size = new System.Drawing.Size(56, 20);
             this.chunkHflip.TabIndex = 16;
@@ -248,7 +269,8 @@
             // chunkVflip
             // 
             this.chunkVflip.AutoSize = true;
-            this.chunkVflip.Location = new System.Drawing.Point(123, 410);
+            this.chunkVflip.Location = new System.Drawing.Point(134, 412);
+            this.chunkVflip.Margin = new System.Windows.Forms.Padding(2);
             this.chunkVflip.Name = "chunkVflip";
             this.chunkVflip.Size = new System.Drawing.Size(55, 20);
             this.chunkVflip.TabIndex = 17;
@@ -258,9 +280,10 @@
             // 
             // saveChunk
             // 
-            this.saveChunk.Location = new System.Drawing.Point(12, 437);
+            this.saveChunk.Location = new System.Drawing.Point(190, 409);
+            this.saveChunk.Margin = new System.Windows.Forms.Padding(2);
             this.saveChunk.Name = "saveChunk";
-            this.saveChunk.Size = new System.Drawing.Size(166, 38);
+            this.saveChunk.Size = new System.Drawing.Size(144, 29);
             this.saveChunk.TabIndex = 18;
             this.saveChunk.Text = "export chunk";
             this.saveChunk.UseVisualStyleBackColor = true;
@@ -268,9 +291,10 @@
             // 
             // saveTile
             // 
-            this.saveTile.Location = new System.Drawing.Point(477, 189);
+            this.saveTile.Location = new System.Drawing.Point(426, 140);
+            this.saveTile.Margin = new System.Windows.Forms.Padding(2);
             this.saveTile.Name = "saveTile";
-            this.saveTile.Size = new System.Drawing.Size(87, 48);
+            this.saveTile.Size = new System.Drawing.Size(85, 29);
             this.saveTile.TabIndex = 19;
             this.saveTile.Text = "export tile";
             this.saveTile.UseVisualStyleBackColor = true;
@@ -278,18 +302,20 @@
             // 
             // saveBlock
             // 
-            this.saveBlock.Location = new System.Drawing.Point(409, 435);
+            this.saveBlock.Location = new System.Drawing.Point(365, 409);
+            this.saveBlock.Margin = new System.Windows.Forms.Padding(2);
             this.saveBlock.Name = "saveBlock";
-            this.saveBlock.Size = new System.Drawing.Size(160, 38);
+            this.saveBlock.Size = new System.Drawing.Size(144, 29);
             this.saveBlock.TabIndex = 20;
-            this.saveBlock.Text = "export tile";
+            this.saveBlock.Text = "export block";
             this.saveBlock.UseVisualStyleBackColor = true;
             this.saveBlock.Click += new System.EventHandler(this.saveBlock_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(495, 90);
+            this.label1.Location = new System.Drawing.Point(466, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 21;
@@ -297,9 +323,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 494);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(578, 460);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveBlock);
             this.Controls.Add(this.saveTile);
@@ -321,8 +347,7 @@
             this.Controls.Add(this.currentTile);
             this.Controls.Add(this.currentChunk);
             this.Controls.Add(this.loadArt);
-            this.MaximumSize = new System.Drawing.Size(602, 541);
-            this.MinimumSize = new System.Drawing.Size(602, 541);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "TileViewer";

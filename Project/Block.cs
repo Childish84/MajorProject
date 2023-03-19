@@ -12,7 +12,7 @@ namespace Project
     public class Block : IDisposable
     {
         public int ID { get; private set; }
-        private byte[] data { get; } = new byte[8];
+        public byte[] data { get; private set; } = new byte[8];
 
         public static List<Block> List { get; } = new List<Block>();
         public Block()
@@ -30,7 +30,6 @@ namespace Project
             while (List.Count > 0)
             {
                 List[0].Dispose();
-                Console.WriteLine("doing a thing " + List.Count + List.Count());
             }
         }
         public void Dispose()
@@ -48,7 +47,6 @@ namespace Project
             {
                 new Block();
             }
-            Console.WriteLine(List.Count);
         }
         public Bitmap ToBMP(bool hFlip, bool vFlip)
         {
@@ -64,7 +62,6 @@ namespace Project
                     bool Hflip = Convert.ToBoolean((data[tileToDraw * 2] & 0b0000_1000) >> 3);
                     int tileID = (data[tileToDraw * 2] & 0b0000_0111)<<8;
                     tileID += data[tileToDraw*2 + 1];
-                    Console.WriteLine(tileID);
 
                     Tile tile;
                     if (tileID > Tile.List.Count-1)

@@ -67,8 +67,19 @@ namespace Project
                 0xFF
             };
 
-            byte[] CRAM = File.ReadAllBytes(path);
+            byte[] CRAM = File.ReadAllBytes("SonicAndTails.bin");
 
+            for (int i = 0; i < 16; i++)
+            {
+                int blue = CRAM[i * 2] & 0x0F;
+                int green = CRAM[i * 2] >> 4;
+                int red = CRAM[i * 2 + 1] & 0x0F;
+
+                paletes[i, 0] = Color.FromArgb(0xFF, c[red >> 1], c[green >> 1], c[blue >> 1]);
+            }
+
+            CRAM = File.ReadAllBytes(path);
+            
             for (int j = 0; j < 3; j++)
             {
                 for (int i = 0; i < 16; i++)
@@ -161,7 +172,6 @@ namespace Project
                         if (thirdByte == 1)
                         {
                             Console.WriteLine("stuff");
-                            Console.ReadKey();
                             descriptor = (BitConverter.ToInt16(source, sourcePos)); sourcePos += 2;
                             counter = 0xF;
                         }
